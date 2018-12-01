@@ -7,6 +7,8 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="shortcut icon" href="favicon.ico"/>
+
+
 <body id="myPage">
 
 <!-- Sidebar on click 
@@ -39,11 +41,28 @@
 
 <!-- Image Header -->
 <div class="w3-display-container w3-animate-opacity">
-  <img src="banner.png" alt="boat" style="width:100%;min-height:350px;max-height:600px; margin-top:40px">
+	<div id="container" class="container">
+		<ul id="scene" class="scene">
+			<li class="layer" data-depth="1.00"><img src="banner.png" alt="boat" style="width:100%;min-height:350px;max-height:600px; margin-top:40px"></li>
+			<!--<li class="layer" data-depth="0.60"><img src="images/shadows-01.png"></li>
+			<li class="layer" data-depth="0.20"><img src="images/monster-01.png"></li>
+			<li class="layer" data-depth="0.40"><img src="images/text-01.png"></li>
+			<li class="layer" data-depth="0.10"><img src="images/monster-eyes-01.png"></li>-->
+		</ul>
+		</div>
+
+  
   <div class="w3-container w3-display-bottomleft w3-margin-bottom">  
    
   </div>
 </div>
+<script src="js/parallax.js"></script>
+	<script>
+	// Pretty simple huh?
+	var scene = document.getElementById('scene');
+	var parallax = new Parallax(scene);
+	</script>
+
 
 <!-- Modal 
 <div id="id01" class="w3-modal">
